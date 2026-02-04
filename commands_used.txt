@@ -1,0 +1,27 @@
+# Kafka Installation & Setup
+
+tar -xzf kafka_2.13-4.1.1.tgz
+cd kafka_2.13-4.1.1
+
+# Generate cluster UUID
+bin/kafka-storage.sh random-uuid
+
+# Format storage (KRaft mode)
+bin/kafka-storage.sh format -c config/server.properties --standalone -t <UUID>
+
+# Start Kafka broker
+bin/kafka-server-start.sh config/server.properties
+
+# Create topic
+bin/kafka-topics.sh --bootstrap-server localhost:9092 \
+--create --topic pi-test-topic --partitions 1 --replication-factor 1
+
+# List topics
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+# Producer
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic pi-test-topic
+
+# Consumer
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
+--topic pi-test-topic --from-beginning
