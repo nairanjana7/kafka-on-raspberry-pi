@@ -74,6 +74,7 @@ To evaluate the scalability of the pipeline, concurrent Raspberry Pi producers w
 Kafka successfully buffered incoming events using its append-only log, allowing producers and consumers to remain decoupled even under increased load.
 
 
+
 ## Observed Behavior at 350 Producers
 
 At 350 concurrent Raspberry Pi producers, the system demonstrated the following characteristics:
@@ -83,5 +84,20 @@ At 350 concurrent Raspberry Pi producers, the system demonstrated the following 
 - Kafka broker sustained continuous ingestion of events
 - Consumers processed messages in real time without blocking
 - Alerting logic remained functional under sustained load
+
+## Demo Recording
+
+A live screen recording of the system execution is available for verification.
+
+The recording demonstrates:
+- Kafka broker running on Raspberry Pi
+- MQTT producers generating concurrent traffic
+- MQTT-to-Kafka bridge forwarding messages
+- Kafka consumers processing data in real time
+- Gradual scaling from lower load to approximately 350 concurrent producers
+
+Demo video link:
+<https://drive.google.com/file/d/1jzN6Xo4SAEFxAgfzhmcDubQthhKoW--C/view?usp=sharing>
+
 
 This confirms that Kafka effectively decouples high-volume event ingestion from downstream processing, making the architecture suitable for real-world IoT and edge analytics use cases where burst traffic and high concurrency are expected.
