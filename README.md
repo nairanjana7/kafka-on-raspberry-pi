@@ -1,12 +1,12 @@
 # Apache Kafka on Raspberry Pi 4/5 (8GB RAM)
 
-## 📌 Problem Statement
+##  Problem Statement
 Deploy an Apache Kafka broker on Raspberry Pi 4/5 (8GB RAM, 4 cores) and validate
 producer–consumer message flow.
 
 ---
 
-## 🧠 Conceptual Overview
+##  Conceptual Overview
 - Kafka broker runs on Raspberry Pi in **KRaft (ZooKeeper-less) mode**
 - Raspberry Pi acts as an **edge Kafka node**
 - Producers publish events to Kafka topics
@@ -14,12 +14,12 @@ producer–consumer message flow.
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 Producer → Kafka Broker (Raspberry Pi) → Consumer
 
 ---
 
-## ⚙️ Technical Setup
+## Technical Setup
 - Device: Raspberry Pi 4/5 (8GB RAM, Quad Core)
 - OS: Ubuntu Server 22.04
 - Java: OpenJDK 17
@@ -27,7 +27,7 @@ Producer → Kafka Broker (Raspberry Pi) → Consumer
 
 ---
 
-## 🚀 Steps Performed
+##  Steps Performed
 
 1. Installed Java 17
 2. Downloaded Apache Kafka
@@ -40,14 +40,14 @@ Producer → Kafka Broker (Raspberry Pi) → Consumer
 
 ---
 
-## ✅ Verification
+##  Verification
 - Messages produced successfully
 - Messages consumed using `--from-beginning`
 - Logs stored on disk
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 Kafka can be deployed on Raspberry Pi 4/5 (8GB RAM) for:
 - Edge analytics
 - IoT gateways
@@ -55,7 +55,7 @@ Kafka can be deployed on Raspberry Pi 4/5 (8GB RAM) for:
 
 ---
 
-## 🔮 Future Work
+## Future Work
 - ESP32 → MQTT → Kafka integration
 - Multi-node Raspberry Pi Kafka cluster
 
